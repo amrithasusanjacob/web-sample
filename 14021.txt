@@ -1,0 +1,46 @@
+var http= require("http");
+http.createServer(function(request,response){
+    response.writeHead(200,{"Content-Type":"text/plain"})
+    response.write("Hello World 123");
+    response.end();
+     
+}).listen(3001);
+------------------------------------------
+
+function say(word) {
+    console.log(word);
+    return "yes"
+}
+console.log(say('HELLO'));
+------------------------------------------
+function add(num1,num2) {
+    //console.log(num1+num2);
+    return num1+num2
+}
+console.log(add(2,3));
+------------------------------------------
+function say(word){
+    console.log(word);
+}
+function execute (someFunction,value){
+    someFunction(value);
+
+}
+execute(say,"hello");
+------------------------------------------
+function execute (someFunction,value){
+    someFunction(value);
+
+}
+execute(function(word){ console.log(word)},"hello"); **********INLINE FUNCTION DEFINITION
+------------------------------------------
+var http=require("http");
+function onRequest(request,response){
+    response.writeHead(200,{"Content-Type":"text/plain"});
+    response.write("Hello 1234");
+    response.end();
+}
+http.createServer(onRequest).listen(3003);
+console.log("Server has started");
+-----------------------------------------
+
